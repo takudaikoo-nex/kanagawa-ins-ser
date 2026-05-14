@@ -358,31 +358,48 @@ ul, ol { list-style: none; }
    NOTICE SECTION
    ============================================================ */
 .notice-section {
-  background: #ecf2fb;
-  border-top: 1px solid #c8d9f0;
-  border-bottom: 1px solid #c8d9f0;
-  padding: 28px 0;
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+  background-image: url('/assets/images/common/hero01.png');
+  background-size: cover;
+  background-position: center;
 }
-.notice-box {
-  background: var(--white);
-  border-left: 4px solid var(--navy);
-  padding: 24px 28px;
-  font-size: .9rem;
-  line-height: 1.95;
-  color: var(--text);
+.notice-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.91);
 }
-.notice-box p + p { margin-top: 12px; }
+.notice-section .container {
+  position: relative;
+  z-index: 1;
+}
 .notice-label {
-  font-size: .95rem;
+  display: inline-block;
+  background: #cc0000;
+  color: #fff;
   font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 10px;
+  font-size: .92rem;
+  letter-spacing: .07em;
+  padding: 7px 30px;
+  border-radius: 999px;
+  margin-bottom: 28px;
 }
-.notice-box a {
-  color: var(--accent);
+.notice-text {
+  color: #cc0000;
+  font-size: .92rem;
+  line-height: 2.1;
+  max-width: 820px;
+  margin: 0 auto 14px;
+}
+.notice-text:last-child { margin-bottom: 0; }
+.notice-text a {
+  color: #cc0000;
   text-decoration: underline;
+  font-weight: 700;
 }
-.notice-box a:hover { color: var(--navy); }
+.notice-text a:hover { color: #990000; }
 
 /* ============================================================
    WHY CHOOSE US — cards with photo tops
